@@ -49,9 +49,13 @@ Perl 1st grade
 == Perl의 식상한 소개
 
 * Perl : Practical Extraction and Report Language
-+* Perl의 MOTO - TMTOWTDI (There's More Than One Way To Do It.)
-+* 무엇인가를 하는데에 한가지 방법만 있는 것이 아니다.
+
++* Perl의 MOTO - 
+  TMTOWTDI (There's More Than One Way To Do It.)
++  무엇인가를 하는데에 한가지 방법만 있는 것이 아니다.
+
 +* 창시자 : Larry Wall. 언어학자
+
 +* 특징
 + * 정규표현식 사용에 특화
 + * 자유도가 높은 문법
@@ -63,30 +67,65 @@ Perl 1st grade
 +  안죽었어요. 계속 메이저 업데이트가 나옵니다.
 
 +* Perl은 알아보기 힘들다?
-+  Perl은 한없이 축약해서도, 더없이 정형화된 형태로도 작성할 수 있습니다.
++  Perl은 한없이 축약해서도, 
+  더없이 정형화된 형태로도 작성할 수 있습니다.
 
 +* Perl은 느리다?
-+  Perl보다 느린 언어로써 Python, Ruby, Java 가 있습니다.
++  Perl보다 느린 대표적인 언어로써 
+  Python, Ruby, Java 가 있습니다.
 
 ----
 == Perl의 편견 #2
 
 +* Perl은 OOP가 없다?
-+  Python으로부터 기본적인 OOP를 차용하였고, 현재는 MOP스타일이 대유행입니다.
++  Python으로부터 기본적인 OOP를 차용하였고, 
+  현재는 MOP스타일이 대유행입니다.
 
 +* Perl은 서버에서만 유용하다?
-+  Perl도 Tcl/Tk, GTK+, WxWidget등의 GUI라이브러리를 사용합니다.
++  Perl도 Tcl/Tk, GTK+, WxWidget등의 
+  GUI라이브러리를 사용할 수 있습니다.
 
 +* Perl은 이벤트 드리븐같은 멋드러진게 안된다.
-+  node.js의 핵심인 livev 라이브러리는 사실 Perl의 AnyEvent 모듈의 부산물입니다.
++  node.js의 핵심인 livev 라이브러리는 
+  사실 Perl의 AnyEvent모듈의 부산물입니다.
 
-+* Perl은 easy_install, gem, maven등의 발전된 모듈설치 시스템이 없다.
-+  Perl에는 CPAN이라는 가장 오래되고 거대한 모듈관리 시스템이 있습니다.
++* Perl은 easy_install, gem, maven등의 
+  발전된 모듈설치 시스템이 없다.
++  Perl에는 CPAN이라는 가장 오래되고 거대한 
+  모듈관리 시스템이 있습니다.
 
 ----
 == Perl의 버전
+
++* 버전확인 방법
+
+$ perl -v
+
++* 흔히 서버에 깔린 버전
+
+v5.8.6
+v5.8.8
++가끔 
+v5.10.x
+v5.12.x
+
++* 최신 버전
+
+v5.18.1
+
++ 무려 18번의 메이저 업데이트!!
+
 ----
 == Perl의 설치
+
+On linux/OSX
++ * 시스템 업데이트
++ * PerlBrew 로 사용자 홈디렉토리에 설치.
+
++On Windows
++ * Strawberry Perl(딸기펄)
++ * ActiveState사의 Active Perl
+
 ----
 == Perl의 시작과 끝
 ----
