@@ -1,0 +1,110 @@
+# This is a sample Vroom input file. It should help you get started.
+#
+# Edit this file with your content. Then run `vroom vroom` to start
+# the show!
+#
+# See `perldoc Vroom` for complete details.
+#
+---- config
+# Basic config options.
+title: Vroom!
+indent: 5
+auto_size: 1
+# height: 18
+# width: 69
+vim_opts: '-u NONE'
+skip: 0
+
+# The following options are for Gvim usage.
+# vim: gvim
+# gvimrc: |
+#   set fuopt=maxhorz,maxvert
+#   set guioptions=egmLtT
+#   set guifont=Bitstream_Vera_Sans_Mono:h18
+#   set guicursor=a:blinkon0-ver25-Cursor
+#   colorscheme default
+
+---- center
+
+Perl 1st grade
+
+펄 1학년
+
+김현승
+
+----
+== 목차
+
+* Perl의 식상한 소개
+* Perl의 편견
+* Perl의 버전
+* Perl의 설치
+* Perl의 시작과 끝
+* Perl의 변수
+* Perl의 모듈화
+* Perl과 CPAN
+* Perl과 OOP
+
+----
+== Perl의 식상한 소개
+
+* Perl : Practical Extraction and Report Language
++* Perl의 MOTO - TMTOWTDI (There's More Than One Way To Do It.)
++* 무엇인가를 하는데에 한가지 방법만 있는 것이 아니다.
++* 창시자 : Larry Wall. 언어학자
++* 특징
++ * 정규표현식 사용에 특화
++ * 자유도가 높은 문법
++ * CPAN 최대의 모듈 리포지토리
+---- 
+== Perl의 편견 #1
+
++* Perl은 죽었다?
++  안죽었어요. 계속 메이저 업데이트가 나옵니다.
+
++* Perl은 알아보기 힘들다?
++  Perl은 한없이 축약해서도, 더없이 정형화된 형태로도 작성할 수 있습니다.
+
++* Perl은 느리다?
++  Perl보다 느린 언어로써 Python, Ruby, Java 가 있습니다.
+
+----
+== Perl의 편견 #2
+
++* Perl은 OOP가 없다?
++  Python으로부터 기본적인 OOP를 차용하였고, 현재는 MOP스타일이 대유행입니다.
+
++* Perl은 서버에서만 유용하다?
++  Perl도 Tcl/Tk, GTK+, WxWidget등의 GUI라이브러리를 사용합니다.
+
++* Perl은 이벤트 드리븐같은 멋드러진게 안된다.
++  node.js의 핵심인 livev 라이브러리는 사실 Perl의 AnyEvent 모듈의 부산물입니다.
+
++* Perl은 easy_install, gem, maven등의 발전된 모듈설치 시스템이 없다.
++  Perl에는 CPAN이라는 가장 오래되고 거대한 모듈관리 시스템이 있습니다.
+
+----
+== Perl의 버전
+----
+== Perl의 설치
+----
+== Perl의 시작과 끝
+----
+== Perl의 변수
+----
+== Perl의 모듈화
+----
+== Perl과 CPAN
+----
+== Perl과 OOP
+---- perl,i4
+# This is some Perl code.
+# Notice the syntax highlighting.
+# Run it with the <RR> vim command.
+for my $word (qw(Vroom totally rocks!)) {
+    print "$word\n";
+}
+
+
+----
+== The End
