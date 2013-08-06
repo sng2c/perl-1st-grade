@@ -30,6 +30,7 @@ while(my $line = <$file>)
   last if $num == $curnum;
 }
 $skip--;
+$skip = 0 if( $skip < 0 );
 
 close $file;
 
