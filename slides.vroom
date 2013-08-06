@@ -128,8 +128,28 @@ On linux/OSX
 
 ----
 == Perl의 시작과 끝
+
+#!/usr/bin/env perl
+
+print "Hello World\n";
+
+---- perl,i4
+#!/usr/bin/env perl
+
+print "Hello World\n";
+
 ----
 == Perl의 변수
+
+Scalar : 숫자 또는 문자열등의 단일 자료형
+
++  $foo = 'ABC'; # 문자열
++  $foo = 123;   # 숫자
++  $bar = "$foo DEF"; # 큰따옴표 문자열
++  $bar = '$foo DEF'; # 작은따옴표 문자열(평가안됨)
++  $bar = $foo . "DEF"; # . 연산자
++  $bar = $foo + "DEF"; # 잘못된 예
+
 ----
 == Perl의 모듈화
 ----
