@@ -152,6 +152,44 @@ Scalar : 숫자 또는 문자열등의 단일 자료형
 
 ----
 == Perl의 모듈화
+
+모듈화 방법
+
+* OLD 
+  * require
+  * just perl code
+  * C의 #include 와 유사
+
+* MODERN : use
+  * use
+  * .pm (package 포함)
+  * Java등의 import 와 유사
+---- perl,i4
+# ./sub/module.pl
+sub hello_world{ ... }
+
+1;
+
+# require
+require "./sub/module.pl";
+hello_world();
+
+sub hello_world{ ... } # CONFLICT!!
+sub hello_world2{ ... }
+
+---- perl,i4
+# ./Sub/Module.pm
+package Sub::Module;
+
+sub hello_world{ ... }
+
+1;
+
+# use
+use Sub::Module; # ./Sub/Module.pm
+Sub::Module::hello_world();
+
+sub hello_world{ ... } #OK
 ----
 == Perl과 CPAN
 ----
