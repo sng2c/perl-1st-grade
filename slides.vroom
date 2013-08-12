@@ -191,9 +191,100 @@ Sub::Module::hello_world();
 
 sub hello_world{ ... } #OK
 ----
-== Perl과 CPAN
+== Perl과 CPAN (1)
+
+* CPAN - Comprehensive Perl Archive Network
++* 포괄적인 Perl 아카이브 네트워크
++* Perl 파일이면 뭐든지 올릴 수 있는 사이트
++* 1995년에 시작. 약 1만명의 작성자(저도 포함)
++* 하루에도 수십개의 새모듈또는 업데이트가 올라옴.
++* 분야는 Daemon,Algorithm,Bio,GUI,Net,DB,OOP,EDD 등 다양
+
+----
+== Perl과 CPAN (2)
+
+사이트
+
+* CPAN : http://www.cpan.org/
+* MetaCPAN : https://metacpan.org
+
+명령어
+
+* cpan  : cpan 리포지토리를 검색하고 모듈을 설치
+* cpanp : 추가하여 모듈의 삭제, 관리등의 추가 기능
+* cpanm : 단순히 하여 설치를 간편히
+
+----
+== Perl과 CPAN (3)
+
+$ sudo cpan install App::cpanminus
++... blah blah ...
++$ sudo cpanm Module::Name
++... (installing into the system) ...
+$
+
++* local::lib를 이용하면 사용자디렉토리에 설치
++$ perl -Mlocal::lib >> ~/.bashrc
++$ source ~/.bashrc
++$ cpanm Module::Name
++... (installing into user's directory) ...
+$
+
+----
+== Perl과 CPAN (4)
+
+WWW::Mechanize 를 설치
+
++$ cpanm WWW::Mechanize
+
 ----
 == Perl과 OOP
+
+* Perl의 OOP는 존재하지 않았음.
+* Python의 OOP를 차용
+* Package단위로 클래스가 되고, 메소드는 첫번째 인자로 객체 자신을 받음
+* new를 직접 선언
+
+---- perl,i4
+# bare OOP - Dog.pm
+package Dog;
+
+sub new{
+  my ($class, %args) = @_;
+  return bless {%args},$class; # {%args}를 $class로 축복하다(?)
+}
+
+sub name{
+  my ($self, $newname) = @_;
+  $self->{name} = $newname if ( defined($newname) );
+  return $self->{name};
+}
+
+1;
+
+# usage test.pl
+use Dog;
+my $dog = Dog->new({name=>'mary'});
+print $dog->name();
+print $dog->name('똥개');
+
+---- perl,i4
+# to install Moo, type 'cpanm Moo' on shell.
+# Modern OOP, using Moo - Dog.pm
+package Dog;
+use Moo;
+
+has name =>(is=>'rw');
+
+1;
+
+# usage test.pl
+use Dog;
+my $dog = Dog->new({name=>'mary'});
+print $dog->name();
+print $dog->name('똥개');
+
+
 ---- perl,i4
 # This is some Perl code.
 # Notice the syntax highlighting.
